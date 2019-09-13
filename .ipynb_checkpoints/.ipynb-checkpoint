@@ -821,25 +821,57 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 11,
+   "execution_count": 17,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "[1, 3, 5, 7]\n",
-      "['sunrise', 'morning', 'sun']\n"
+      "[1, 3, 5, 7, 9]\n",
+      "[3, 5, 7, 9]\n",
+      "[3, 5, 7, 9, 11, 13, 15, 17]\n",
+      "[3, 5, 7, 9, 8, 11, 13, 15, 17]\n",
+      "[3, 5, 7, 9, 8, 11, 13, 15]\n",
+      "['sunrise', 'morning', 'sun', 'sky']\n",
+      "['morning', 'sun', 'sky']\n",
+      "['morning', 'sun', 'sky', 'clouds', 'dawn']\n",
+      "['morning', 'sun', 'sky', 'clouds', 'daybreak', 'dawn']\n",
+      "['morning', 'sun', 'sky', 'clouds', 'daybreak']\n"
      ]
     }
    ],
    "source": [
     "# Your code here\n",
     "\n",
+    "mylist_1= [1,3,5,7]\n",
+    "\n",
+    "mylist_1.append(9)\n",
+    "print(mylist_1)\n",
+    "mylist_1.remove(1)\n",
+    "print(mylist_1)\n",
+    "mylist_1.extend([11, 13, 15, 17])\n",
+    "print(mylist_1)\n",
+    "mylist_1.insert(4,8)\n",
+    "print(mylist_1)\n",
+    "mylist_1.pop(8)\n",
     "print(mylist_1)\n",
     "\n",
     "\n",
-    "print(mylist_3)"
+    "mylist_3= [\"sunrise\",\"morning\", \"sun\"]\n",
+    "mylist_3.append(\"sky\")\n",
+    "print(mylist_3)\n",
+    "mylist_3.remove(\"sunrise\")\n",
+    "print(mylist_3)\n",
+    "mylist_3.extend([\"clouds\", \"dawn\"])\n",
+    "print(mylist_3)\n",
+    "mylist_3.insert(4,\"daybreak\")\n",
+    "print(mylist_3)\n",
+    "mylist_3.pop(5)\n",
+    "print(mylist_3)\n",
+    "\n",
+    "\n",
+    "\n"
    ]
   },
   {
@@ -1208,21 +1240,74 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 159,
+   "execution_count": 36,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[7, 8, 3, 0, 1, 1, 4, 3, 4, 1, 5, 0, 8, 4, 2, 2, 5, 4, 9, 1, 5, 3, 2, 5, 7, 8, 7, 5, 8, 7, 7, 6, 7, 4, 2, 4, 0, 0, 9, 7, 1, 7, 6, 4, 8, 4, 2, 3, 5, 5, 4, 1, 4, 4, 0, 8, 8, 4, 5, 3, 7, 7, 9, 4, 0, 1, 8, 3, 3, 6, 2, 6, 0, 6, 4, 4, 5, 3, 3, 6, 2, 9, 5, 8, 7, 0, 9, 3, 2, 3, 2, 7, 2, 2, 1, 0, 9, 0, 0, 7]\n",
+      "Number of Instances 0 11\n",
+      "Number of Instances 1 8\n",
+      "Number of Instances 2 11\n",
+      "Number of Instances 3 11\n",
+      "Number of Instances 4 15\n",
+      "Number of Instances 5 10\n",
+      "Number of Instances 6 6\n",
+      "Number of Instances 7 13\n",
+      "Number of Instances 8 9\n",
+      "Number of Instances 9 6\n"
+     ]
+    }
+   ],
    "source": [
-    "# Your code here"
+    "# Q1:\n",
+    "\n",
+    "rand1= [7, 8, 3, 0, 1, 1, 4, 3, 4, 1, 5, 0, 8, 4, 2, 2, 5, 4, 9, 1, 5, 3, 2, 5, 7, 8, 7, 5, 8, 7, 7, 6, 7, 4, 2, 4, 0, 0, 9, 7, 1, 7, 6, 4, 8, 4, 2, 3, 5, 5, 4, 1, 4, 4, 0, 8, 8, 4, 5, 3, 7, 7, 9, 4, 0, 1, 8, 3, 3, 6, 2, 6, 0, 6, 4, 4, 5, 3, 3, 6, 2, 9, 5, 8, 7, 0, 9, 3, 2, 3, 2, 7, 2, 2, 1, 0, 9, 0, 0, 7]\n",
+    "print(randl)\n",
+    "\n",
+    "for i in range (0, 10):\n",
+    "    print(\"Number of Instances\", i, rand1.count(i))\n"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 160,
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[7, 8, 3, 0, 1, 1, 4, 3, 4, 1, 5, 0, 8, 4, 2, 2, 5, 4, 9, 1, 5, 3, 2, 5, 7, 8, 7, 5, 8, 7, 7, 6, 7, 4, 2, 4, 0, 0, 9, 7, 1, 7, 6, 4, 8, 4, 2, 3, 5, 5, 4, 1, 4, 4, 0, 8, 8, 4, 5, 3, 7, 7, 9, 4, 0, 1, 8, 3, 3, 6, 2, 6, 0, 6, 4, 4, 5, 3, 3, 6, 2, 9, 5, 8, 7, 0, 9, 3, 2, 3, 2, 7, 2, 2, 1, 0, 9, 0, 0, 7]\n",
+      "['odd', 'even', 'odd', 'even', 'odd', 'odd', 'even', 'odd', 'even', 'odd', 'odd', 'even', 'even', 'even', 'even', 'even', 'odd', 'even', 'odd', 'odd', 'odd', 'odd', 'even', 'odd', 'odd', 'even', 'odd', 'odd', 'even', 'odd', 'odd', 'even', 'odd', 'even', 'even', 'even', 'even', 'even', 'odd', 'odd', 'odd', 'odd', 'even', 'even', 'even', 'even', 'even', 'odd', 'odd', 'odd', 'even', 'odd', 'even', 'even', 'even', 'even', 'even', 'even', 'odd', 'odd', 'odd', 'odd', 'odd', 'even', 'even', 'odd', 'even', 'odd', 'odd', 'even', 'even', 'even', 'even', 'even', 'even', 'even', 'odd', 'odd', 'odd', 'even', 'even', 'odd', 'odd', 'even', 'odd', 'even', 'odd', 'odd', 'even', 'odd', 'even', 'odd', 'even', 'even', 'odd', 'even', 'odd', 'even', 'even', 'odd']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Q2:\n",
+    "\n",
+    "rand1= [7, 8, 3, 0, 1, 1, 4, 3, 4, 1, 5, 0, 8, 4, 2, 2, 5, 4, 9, 1, 5, 3, 2, 5, 7, 8, 7, 5, 8, 7, 7, 6, 7, 4, 2, 4, 0, 0, 9, 7, 1, 7, 6, 4, 8, 4, 2, 3, 5, 5, 4, 1, 4, 4, 0, 8, 8, 4, 5, 3, 7, 7, 9, 4, 0, 1, 8, 3, 3, 6, 2, 6, 0, 6, 4, 4, 5, 3, 3, 6, 2, 9, 5, 8, 7, 0, 9, 3, 2, 3, 2, 7, 2, 2, 1, 0, 9, 0, 0, 7]\n",
+    "print(rand1)\n",
+    "newlist=[]\n",
+    "\n",
+    "for i in rand1:\n",
+    "    if i%2==0:\n",
+    "        newlist.append(\"even\")\n",
+    "    else:\n",
+    "        newlist.append(\"odd\")\n",
+    "\n",
+    "print(newlist)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
-   "source": [
-    "# Your code here"
-   ]
+   "source": []
   }
  ],
  "metadata": {
